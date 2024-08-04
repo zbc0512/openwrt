@@ -29,6 +29,7 @@ concurrency:
 
 jobs:
   build-packages:
+    runs-on: self-hosted
     name: Build all core packages for selected target
     permissions:
       contents: read
