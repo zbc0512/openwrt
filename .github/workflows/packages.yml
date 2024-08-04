@@ -29,13 +29,13 @@ concurrency:
 
 jobs:
   build-packages:
-    runs-on: self-hosted
     name: Build all core packages for selected target
     permissions:
       contents: read
       packages: read
       actions: write
     secrets:
+      runs-on: self-hosted
       ccache_s3_endpoint: ${{ secrets.CCACHE_S3_ENDPOINT }}
       ccache_s3_bucket: ${{ secrets.CCACHE_S3_BUCKET }}
       ccache_s3_access_key: ${{ secrets.CCACHE_S3_ACCESS_KEY }}
